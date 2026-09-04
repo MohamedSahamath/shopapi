@@ -1,8 +1,5 @@
 package lk.ijse.shopapi.entity;
 
-public class User {
-    package lk.ijse.shopapi.entity;
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -46,4 +43,4 @@ import java.util.Set;
             this.createdAt = LocalDateTime.now();
         }
     }
-}
+

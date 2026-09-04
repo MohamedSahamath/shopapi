@@ -1,5 +1,5 @@
 package lk.ijse.shopapi.util.enums;
 
-public class PaymentMethod {
+public enum PaymentMethod {
     CARD, CASH_ON_DELIVERY
 }

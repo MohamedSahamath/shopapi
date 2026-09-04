@@ -1,5 +1,5 @@
 package lk.ijse.shopapi.util.enums;
 
-public class PaymentStatus {
+public enum PaymentStatus {
     PENDING, PAID, FAILED, REFUNDED
 }
