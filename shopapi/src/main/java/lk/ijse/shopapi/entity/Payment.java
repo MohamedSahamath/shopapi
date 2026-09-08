@@ -1,6 +1,8 @@
 package lk.ijse.shopapi.entity;
 
 import jakarta.persistence.*;
+import lk.ijse.shopapi.util.enums.PaymentMethod;
+import lk.ijse.shopapi.util.enums.PaymentStatus;
 import lombok.*;
 
 import java.math.BigDecimal;

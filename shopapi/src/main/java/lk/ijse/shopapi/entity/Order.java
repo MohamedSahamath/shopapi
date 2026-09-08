@@ -1,6 +1,7 @@
 package lk.ijse.shopapi.entity;
 
 import jakarta.persistence.*;
+import lk.ijse.shopapi.util.enums.OrderStatus;
 import lombok.*;
 
 import java.math.BigDecimal;
