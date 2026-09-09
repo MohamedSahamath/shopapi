@@ -2,9 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+<div class="navbar">
+    <h1>Shop Management</h1>
+    <div class="links">
+        <a href="#" id="navShop">Products</a>
+        <a href="#" id="navCart">Cart (<span id="cartCount">0</span>)</a>
+        <a href="#" id="navOrders">My orders</a>
+        <span id="navUser"></span>
+        <a href="#" id="navLogout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div id="alert" class="hidden"></div>
+
+    <div id="viewProducts">
+        <h2>Products</h2>
+        <input type="text" id="searchBox" placeholder="Search products...">
+        <div class="grid" id="productGrid"></div>
+    </div>
+
+    <div id="viewCart" class="hidden">
+        <h2>Your cart</h2>
+        <div class="card">
+            <table><tbody id="cartTable"></tbody></table>
+            <h3 style="margin-top:16px" id="cartTotal"></h3>
+        </div>
+        <div class="card">
+            <h3>Delivery address</h3>
+            <select id="addressSelect"></select>
+            <h3 style="margin-top:12px">Add a new address</h3>
+            <input type="text" id="addrLine1" placeholder="Address line 1">
+            <input type="text" id="addrCity" placeholder="City">
+            <input type="text" id="addrPostal" placeholder="Postal code (5 digits)">
+            <button class="secondary small" id="btnAddAddress">Save address</button>
+        </div>
+        <div class="card">
+            <h3>Payment</h3>
+            <select id="payMethod">
+                <option value="CARD">Credit / debit card</option>
+                <option value="CASH_ON_DELIVERY">Cash on delivery</option>
+            </select>
+            <input type="text" id="cardLast4" placeholder="Last 4 digits of card" maxlength="4">
+            <button id="btnCheckout">Place order and pay</button>
+        </div>
+    </div>
+
+    <div id="viewOrders" class="hidden">
+        <h2>My orders</h2>
+        <div id="ordersList"></div>
+    </div>
+
+    <div id="viewFeedback" class="hidden">
+        <h2 id="feedbackTitle"></h2>
+        <div class="card">
+            <label>Rating</label>
+            <select id="fbRating">
+                <option value="5">5 — Excellent</option>
+                <option value="4">4 — Good</option>
+                <option value="3">3 — Average</option>
+                <option value="2">2 — Poor</option>
+                <option value="1">1 — Very poor</option>
+            </select>
+            <label>Comment</label>
+            <textarea id="fbComment" rows="3"></textarea>
+            <button id="btnSubmitFeedback">Submit feedback</button>
+        </div>
+        <div class="card">
+            <h3>What others said</h3>
+            <div id="feedbackList"></div>
+        </div>
+        <button class="secondary" id="btnBackToProducts">Back to products</button>
+    </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/shop.js"></script>
 </body>
 </html>

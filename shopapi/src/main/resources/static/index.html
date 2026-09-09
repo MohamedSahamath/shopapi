@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Management — Login</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+<div class="navbar">
+    <h1>Shop Management</h1>
+    <div class="links"><a href="/shop.html">Browse products</a></div>
+</div>
+
+<div class="container">
+    <div class="card auth-card">
+        <div class="tabs">
+            <div class="tab active" id="tabLogin">Login</div>
+            <div class="tab" id="tabRegister">Register</div>
+        </div>
+
+        <div id="alert" class="hidden"></div>
+
+        <div id="loginForm">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="admin@shop.lk">
+            <label>Password</label>
+            <input type="password" id="loginPassword">
+            <button id="btnLogin">Login</button>
+        </div>
+
+        <div id="registerForm" class="hidden">
+            <label>Full name</label>
+            <input type="text" id="regName">
+            <label>Email</label>
+            <input type="email" id="regEmail">
+            <label>Password</label>
+            <input type="password" id="regPassword">
+            <label>NIC</label>
+            <input type="text" id="regNic" placeholder="200012345678 or 931234567V">
+            <label>Phone</label>
+            <input type="text" id="regPhone" placeholder="0771234567">
+            <button id="btnRegister">Create account</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
 </body>
 </html>
